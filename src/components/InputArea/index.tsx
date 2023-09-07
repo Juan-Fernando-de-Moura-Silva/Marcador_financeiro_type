@@ -57,11 +57,11 @@ export const InputArea = ({ onAdd }: Props) => {
       <C.Container>
         <C.InputLabel>
           <C.InputTitle>Data</C.InputTitle>
-          <C.Input type="date" value={dateField} onChange={e => setDateField(e.target.value)} />
+          <C.Input type="date" value={dateField} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDateField(e.target.value)} />
         </C.InputLabel>
         <C.InputLabel>
           <C.InputTitle>Categoria</C.InputTitle>
-          <C.Select value={categoryField} onChange={e => setCategoryField(e.target.value)}>
+          <C.Select value={categoryField} onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setCategoryField(e.target.value)}>
             <>
               <option></option>
               {categoryKeys.map((key, index) => (
@@ -72,11 +72,11 @@ export const InputArea = ({ onAdd }: Props) => {
         </C.InputLabel>
         <C.InputLabel>
           <C.InputTitle>Título</C.InputTitle>
-          <C.Input type="text" value={titleField} onChange={e => setTitleField(e.target.value)} />
+          <C.Input type="text" value={titleField} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitleField(e.target.value)} />
         </C.InputLabel>
         <C.InputLabel>
           <C.InputTitle>Valor</C.InputTitle>
-          <C.Input type="number" value={valueField} onChange={e => setValueField(parseFloat(e.target.value))} />
+          <C.Input type="number" value={valueField} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValueField(parseFloat(e.target.value))} />
         </C.InputLabel>
         <C.InputLabel>
           <C.InputTitle>&nbsp;</C.InputTitle>
